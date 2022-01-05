@@ -1,0 +1,140 @@
+.tire-details-card {
+    color: @default-color;
+    padding: 50px 40px;
+    .clearfix();
+    margin-bottom: 20px;
+
+    .brand-badge-wrap {
+      width: 100%;
+      .display-flex();
+      padding-bottom: 14px;
+      .badge {
+        .fontsize(12px);
+        color: @blue-1;
+
+        span {
+          border: 1px solid @blue-1;
+          border-radius: 15.5px;
+          padding: 6px 10px;
+          display: inline-block;
+        }
+      }
+    }
+
+    .d-flex {
+      @media @tablet-up {
+        flex-wrap: wrap;
+      }
+    }
+
+    .grid-two {
+      @media @tablet-up {
+        width: 100%;
+      }
+    }
+
+    .right-content {
+      text-align: left;
+      @media @tablet-up {
+        padding-top: 16px;
+      }
+      @media @desktop-wide-down {
+        text-align: right;
+      }
+    }
+
+    .tire-title {
+      padding-bottom: 6px;
+      h1 {
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+    }
+
+    .tire-size {
+      p {
+        font-weight: 700;
+        padding-bottom: 6px;
+        .fontsize(16px);
+        span {
+          font-weight: 400;
+          margin-left: 5px;
+          @media @desktop-wide-down {
+          }
+        }
+      }
+    }
+
+    .discount-label {
+      padding-bottom: 12px;
+
+      p {
+        span {
+          font-weight: 700;
+          display: inline-block;
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .tire-price {
+      p {
+        .fontsize(30px);
+        font-weight: 700;
+        line-height: 28px;
+        @media @desktop-wide-down {
+          .fontsize(36px);
+        }
+
+        span {
+          .fontsize(14px);
+          @media @desktop-wide-down {
+            .fontsize(18px);
+          }
+        }
+      }
+    }
+
+    .bundle-price {
+      padding-bottom: 16px;
+      @media @tablet-down {
+        padding-bottom: 32px;
+      }
+      p {
+        span {
+          font-weight: 700;
+          display: inline-block;
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .tire-availability {
+      p {
+        .fontsize(16px);
+        span {
+          font-weight: 700;
+          display: inline-block;
+          margin-left: 5px;
+        }
+      }
+
+      .icon {
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        margin-left: 6px;
+        vertical-align: middle;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .button-wrap {
+    padding: 20px 0;
+    .d-flex {
+      align-items: center;
+    }
+  }
+}

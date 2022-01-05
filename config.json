@@ -1,0 +1,12 @@
+{
+  "production": true,
+  "scopeId": "api://38833372-f4dc-406e-bdb2-093252ab566a/.default",
+  "clientId": "f0ebfd79-31a9-4ad0-bb32-62fa044cb2e5",
+  "tenantId": "7cacbdfd-ebad-46c0-8d1e-b7058ce44173",
+  "authority": "https://login.microsoftonline.com/",
+  "redirectUri": "http://localhost:4200",
+  "membershipApiUrl": "https://app-tires-membership-dev-westus2-001.azurewebsites.net",
+  "vehicleApiUrl": "https://app-tires-vehicle-dev-westus2-001.azurewebsites.net",
+  "invoiceApiUrl": "https://app-tires-invoice-dev-westus2-001.azurewebsites.net",
+  "OcpApimSubscriptionKey": "43d9b1729bd84c458d4e8b25d6bbf14f"
+}

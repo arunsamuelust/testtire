@@ -1,0 +1,179 @@
+
+//1. Responsive breakpoints 
+@mobile:      ~"only screen and (min-width: 380px) and (max-width: 479px)";
+@tablet:      ~"only screen and (min-width: 480px) and (max-width: 767px)";
+@desktop:     ~"only screen and (min-width: 768px) and (max-width: 991px)";
+@desktop-wide:  ~"only screen and (min-width: 992px)";
+
+@desktop-wide-up: ~'(max-width: 1199px)';
+@desktop-up: ~'(max-width: 991px)';
+@tablet-up: ~'(max-width: 767px)';
+@mobile-up: ~'(max-width: 576px)';
+
+@desktop-wide-down: ~'(min-width: 1199px)';
+// from 1199
+@desktop-down: ~'(min-width: 991px)';
+// from 991
+@tablet-down: ~'(min-width: 767px)';
+// from 767
+@mobile-down: ~'(min-width: 576px)';
+// from 480 
+
+
+//2 Font Size
+.fontsize(@size) {
+    font-size: @size; // Fallback in px.
+    font-size: (@size / 16px) * 1rem;
+}
+
+//3 max width 
+.container(@width){
+    max-width: @width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//4. transtions and transforms 
+.transition(@property, @duration, @function) {
+	-webkit-transition: @property @duration @function;
+	-moz-transition: @property @duration @function;
+	-o-transition: @property @duration @function;
+	transition: @property @duration @function;
+}
+
+// 5 Transform
+.transform(@value) {
+	-webkit-transform: @value;
+	-moz-transform: @value;
+	-ms-transform: @value;
+	transform: @value;
+}
+
+// 6 Border radius
+.border-radius(@value) {
+	-webkit-border-radius: @value;
+	-moz-border-radius: @value;
+	border-radius: @value;
+}
+
+//7. Flex
+.display-flex() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+// 8 Align items 
+.align-items(@value) {
+    -webkit-box-align: @value;
+    -moz-box-align: @value;
+    -webkit-align-items: @value;
+    -ms-flex-align: @value;
+    align-items: @value;
+}
+
+// 9 Align content 
+.align-content(@value) {
+    -webkit-box-align: @value;
+    -moz-box-align: @value;
+    -webkit-align-content: @value;
+    -ms-flex-align: @value;
+    align-content: @value;
+}
+
+// 10 Flex flow 
+.flex-flow(@flow) {
+    -webkit-flex-flow: @flow;
+    -ms-flex-flow: @flow;
+    flex-flow: @flow;
+}
+
+//11 Justify content 
+.justify-content(@value) {
+    -webkit-box-pack: @value;
+    -moz-box-pack: @value;
+    -webkit-justify-content: @value;
+    -ms-flex-pack: @value;
+    justify-content: @value;
+}
+
+// 12 flex wrap 
+.flex-wrap(@value: nowrap) {
+    -webkit-flex-wrap: @value;
+    -moz-flex-wrap: @value;
+    flex-wrap: @value;
+}
+
+// 13 opacity 
+.opacity (@opacity) {
+	-webkit-opacity: @opacity;
+	-moz-opacity:    @opacity;
+	opacity:         @opacity;
+}
+
+// 14 transform 
+.transform(@string){
+	-webkit-transform:   @string;
+	-moz-transform:      @string;
+	-ms-transform:       @string;
+	-o-transform:        @string;
+}
+
+//15.Prefix
+.prefix(@property, @value) {
+    .property_('-webkit-@{property}', @value);
+    .property_( '-khtml-@{property}', @value);
+    .property_(   '-moz-@{property}', @value);
+    .property_(          @property,   @value);
+}
+
+// #usage {
+//     .prefix(border-radius, 3px);
+// }
+
+//16 calc width
+.calc(@prop; @val) {
+    @{prop}: calc(~'@{val}');
+    @{prop}: -moz-calc(~'@{val}');
+    @{prop}: -webkit-calc(~'@{val}');
+    @{prop}: -o-calc(~'@{val}');
+  }
+
+// #usage {
+//     .calc(width, 100% - 664px);
+// }
+
+//17. box shadow
+.box-shadow(@top, @left, @blur, @r, @g, @b, @a) {
+	-webkit-box-shadow: @top @left @blur rgba(@r,@g,@b,@a);
+    -moz-box-shadow: @top @left @blur rgba(@r,@g,@b,@a);
+    box-shadow: @top @left @blur rgba(@r,@g,@b,@a);
+}
+
+//18. Appearance
+.appearance-none {
+    -webkit-appearance: none;
+    -moz-appearance: window;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+//19.clearfix
+.clearfix() {
+
+    &:after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+}
+
+// 20 overflow text 
+.overflow-text{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

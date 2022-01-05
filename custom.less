@@ -1,0 +1,153 @@
+@import "typography.less";
+
+// -----------------------------
+// Color dropdown 
+// -----------------------------
+
+.color-dropdown{
+  position: relative;
+  margin-top: -3px;
+  z-index: 1;
+
+  input::-webkit-calendar-picker-indicator {
+    display: none !important;
+  }
+
+  .inputfield:focus{
+    border-color: @blue-4;
+  }
+
+  .icon-down-arrow{
+    position: absolute;
+    top: 13px;
+    right: 6px;
+    z-index: -1;
+    display: block;
+    height: 8px;
+    width: 10px;
+    border: none;
+    background: url("../images/arrow-down.png") no-repeat;
+    background-size: contain;
+  }
+}
+
+.cdk-overlay-pane{
+  transform: none !important;
+
+  .mat-select-panel-wrap{
+  
+    .mat-select-panel{
+      margin-top: 24px;
+      min-width: auto !important;
+      transform: none;
+    }
+
+    .mat-option{
+      .fontsize(14px);
+      color: @blue-text;
+      height: auto !important;
+      line-height: 20px !important;
+      padding: 8px 14px !important;
+      @media @desktop-down {
+        .fontsize(15px);
+      }
+      // &:hover{
+      //   background-color: @blue-1;
+      //   color: #fff;
+      // }
+      // &.mat-active{
+      //   background-color: @blue-1;
+      //   color: #fff;
+      // }
+      &.mat-selected{
+        background-color: @blue-1;
+        color: #fff;
+      }
+    }
+  }
+}
+
+// -----------------------------
+// Dropdown end
+// -----------------------------
+
+// -----------------------------
+// Add components start
+// -----------------------------
+
+.add-components {
+  &.disabled {
+    a {
+      cursor: not-allowed;
+    }
+  }
+
+  .icon {
+    height: 46px;
+    width: 46px;
+    display: inline-block;
+    background-color: @gray-2;
+    .border-radius(100%);
+    text-align: center;
+    vertical-align: middle;
+    .transition(all, 0.5s, ease);
+
+    img {
+      margin-top: 15px;
+      width: 15px;
+    }
+  }
+
+  span {
+    .transition(all, 0.5s, ease);
+    color: @gray-4;
+    margin-left: 6px;
+  }
+}
+
+// -----------------------------
+// Add components end
+// -----------------------------
+
+// -----------------------------
+// Dropdown qty start
+// -----------------------------
+
+.dropdown-qty {
+  position: relative;
+
+  .dropdown-list {
+    background-color: #fff;
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+      0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-top: 2px;
+    z-index: 1
+  }
+
+  .dropdown-list a.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    font-weight: 700;
+    color: @blue-1;
+    .fontsize(16px);
+    cursor: pointer;
+
+    &:hover {
+      background-color: @blue-1;
+      color: #fff;
+    }
+  }
+}
+
+// -----------------------------
+// Dropdown qty end
+// -----------------------------
+
